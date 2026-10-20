@@ -58,6 +58,9 @@ const content = {
         remove: 'Remove',
         checkoutButton: 'Checkout',
         clearButton: 'Clear cart',
+        decreaseLabel: 'Decrease quantity',
+        increaseLabel: 'Increase quantity',
+        itemsLabel: 'items',
     },
 
     checkout: {
@@ -67,6 +70,9 @@ const content = {
         placeOrder: 'Place order',
         summaryTitle: 'Order summary',
         requiredMessage: 'Please fill in all fields.',
+        backToCart: '← Back to cart',
+        namePlaceholder: 'Juan Dela Cruz',
+        addressPlaceholder: 'House no., street, barangay, city',
     },
 
     confirmation: {
@@ -74,6 +80,10 @@ const content = {
         message: 'Thank you! Your food is being prepared.',
         orderNumber: 'Order #',
         backHome: 'Back to home',
+        itemsTitle: 'Your items',
+        deliveringTo: 'Delivering to',
+        statusLabel: 'Status',
+        total: 'Total',
     },
 
     notFound: {
