@@ -34,44 +34,49 @@ export default function Cart() {
 
             <div className="mt-4 space-y-3">
                 {cart.items.map((cartItem) => (
-                    <div key={cartItem.menuItem.id} className="flex items-center gap-4 rounded-lg border bg-white p-3">
+                    <div
+                        key={cartItem.menuItem.id}
+                        className="flex flex-wrap items-center gap-3 rounded-lg border bg-white p-3 sm:flex-nowrap sm:gap-4"
+                    >
                         <ImageWithFallback
                             src={cartItem.menuItem.image}
                             alt={cartItem.menuItem.name}
                             className="h-16 w-16 shrink-0 rounded"
                         />
 
-                        <div className="flex-1">
+                        <div className="min-w-0 flex-1">
                             <h3 className="font-semibold">{cartItem.menuItem.name}</h3>
                             <p className="text-sm text-gray-500">{cartItem.menuItem.getFormattedPrice()}</p>
                         </div>
 
-                        <div className="flex items-center gap-2">
+                        <div className="flex w-full items-center justify-between gap-3 sm:w-auto sm:gap-4">
+                            <div className="flex items-center gap-2">
+                                <button
+                                    aria-label={content.cart.decreaseLabel}
+                                    onClick={() => updateQuantity(cartItem.menuItem.id, cartItem.quantity - 1)}
+                                    className={qtyButton}
+                                >
+                                    {content.symbols.minus}
+                                </button>
+                                <span className="w-6 text-center">{cartItem.quantity}</span>
+                                <button
+                                    aria-label={content.cart.increaseLabel}
+                                    onClick={() => updateQuantity(cartItem.menuItem.id, cartItem.quantity + 1)}
+                                    className={qtyButton}
+                                >
+                                    {content.symbols.plus}
+                                </button>
+                            </div>
+
+                            <div className="w-20 text-right font-semibold">{cartItem.getFormattedSubtotal()}</div>
+
                             <button
-                                aria-label={content.cart.decreaseLabel}
-                                onClick={() => updateQuantity(cartItem.menuItem.id, cartItem.quantity - 1)}
-                                className={qtyButton}
+                                onClick={() => removeItem(cartItem.menuItem.id)}
+                                className="text-sm text-gray-500 underline hover:text-red-600"
                             >
-                                −
-                            </button>
-                            <span className="w-6 text-center">{cartItem.quantity}</span>
-                            <button
-                                aria-label={content.cart.increaseLabel}
-                                onClick={() => updateQuantity(cartItem.menuItem.id, cartItem.quantity + 1)}
-                                className={qtyButton}
-                            >
-                                +
+                                {content.cart.remove}
                             </button>
                         </div>
-
-                        <div className="w-20 text-right font-semibold">{cartItem.getFormattedSubtotal()}</div>
-
-                        <button
-                            onClick={() => removeItem(cartItem.menuItem.id)}
-                            className="text-sm text-gray-500 underline hover:text-red-600"
-                        >
-                            {content.cart.remove}
-                        </button>
                     </div>
                 ))}
             </div>

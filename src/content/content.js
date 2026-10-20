@@ -96,6 +96,15 @@ const content = {
         noImage: 'No image',
     },
 
+    symbols: {
+        star: '⭐',
+        separator: '·',
+        arrow: '→',
+        minus: '−',
+        plus: '+',
+        times: '×',
+    },
+
     footer: '© 2026 GoFoods. Made for a class project.',
 }
 

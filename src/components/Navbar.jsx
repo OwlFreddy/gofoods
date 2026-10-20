@@ -10,11 +10,11 @@ export default function Navbar() {
 
     return (
         <header className="border-b bg-white">
-            <nav className="mx-auto flex max-w-6xl items-center justify-between p-4">
+            <nav className="mx-auto flex max-w-6xl items-center justify-between p-3 text-sm sm:p-4 sm:text-base">
                 <NavLink to="/" className="text-xl font-bold text-orange-500">
                     {content.appName}
                 </NavLink>
-                <div className="flex items-center gap-6">
+                <div className="flex items-center gap-3 sm:gap-6">
                     <NavLink to="/" end className={linkClass}>{content.nav.home}</NavLink>
                     <NavLink to="/restaurants" className={linkClass}>{content.nav.restaurants}</NavLink>
                     <NavLink to="/cart" className={linkClass}>

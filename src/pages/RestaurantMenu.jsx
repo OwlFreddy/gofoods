@@ -59,7 +59,7 @@ export default function RestaurantMenu() {
                 <div className="p-4">
                     <h1 className="text-2xl font-bold">{restaurant.name}</h1>
                     <p className="mt-1 text-sm text-gray-600">
-                        ⭐ {restaurant.rating} · {restaurant.cuisine} · {restaurant.getPriceSymbol()} ·{' '}
+                        {content.symbols.star} {restaurant.rating} {content.symbols.separator} {restaurant.cuisine} {content.symbols.separator} {restaurant.getPriceSymbol()} {content.symbols.separator}{' '}
                         {restaurant.deliveryTime} {content.restaurants.deliveryUnit}
                     </p>
                     <p className="mt-2 text-gray-500">{restaurant.description}</p>
@@ -100,11 +100,11 @@ export default function RestaurantMenu() {
             {!cart.isEmpty() && (
                 <Link
                     to="/cart"
-                    className="fixed bottom-4 left-1/2 flex -translate-x-1/2 items-center gap-3 rounded-full bg-orange-500 px-6 py-3 text-white shadow-lg hover:bg-orange-600"
+                    className="fixed bottom-4 left-1/2 flex w-[calc(100%-2rem)] max-w-md -translate-x-1/2 items-center justify-between gap-3 rounded-full bg-orange-500 px-5 py-3 text-sm text-white shadow-lg hover:bg-orange-600 sm:w-auto sm:text-base"
                 >
                     <span>{cart.getTotalItems()} {content.menu.itemsInCart}</span>
                     <span className="font-semibold">{cart.getFormattedTotal()}</span>
-                    <span>{content.menu.viewCart} →</span>
+                    <span>{content.menu.viewCart} {content.symbols.arrow}</span>
                 </Link>
             )}
         </div>

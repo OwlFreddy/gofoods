@@ -9,8 +9,8 @@ export default function Home() {
 
     return (
         <div className="space-y-12">
-            <section className="rounded-xl bg-orange-500 p-10 text-white">
-                <h1 className="text-4xl font-bold">{content.home.heroTitle}</h1>
+            <section className="rounded-xl bg-orange-500 p-6 text-white sm:p-10">
+                <h1 className="text-3xl font-bold sm:text-4xl">{content.home.heroTitle}</h1>
                 <p className="mt-2 max-w-xl text-orange-50">{content.home.heroSubtitle}</p>
                 <Link
                     to="/restaurants"
