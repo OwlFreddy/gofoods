@@ -14,6 +14,7 @@ const content = {
         heroButton: 'Browse Restaurants',
         featuredTitle: 'Top Rated Restaurants',
         categoriesTitle: 'Browse by Category',
+        viewAll: 'View all',
     },
 
     restaurants: {
@@ -31,6 +32,8 @@ const content = {
         noResults: 'No restaurants match your filters.',
         clearFilters: 'Clear filters',
         deliveryUnit: 'min',
+        categoryLabel: 'Category',
+        resultsCount: 'restaurants found',
     },
 
     menu: {
@@ -73,6 +76,10 @@ const content = {
         title: 'Page not found',
         message: 'The page you’re looking for doesn’t exist.',
         button: 'Go home',
+    },
+
+    common: {
+        noImage: 'No image',
     },
 
     footer: '© 2026 GoFoods. Made for a class project.',
