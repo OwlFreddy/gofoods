@@ -75,7 +75,7 @@ export default function Checkout() {
                     <ul className="mt-3 space-y-2 text-sm">
                         {cart.items.map((cartItem) => (
                             <li key={cartItem.menuItem.id} className="flex justify-between">
-                                <span>{cartItem.quantity} × {cartItem.menuItem.name}</span>
+                                <span>{cartItem.quantity} {content.symbols.times} {cartItem.menuItem.name}</span>
                                 <span>{cartItem.getFormattedSubtotal()}</span>
                             </li>
                         ))}

@@ -28,7 +28,7 @@ export default function Confirmation() {
             <ul className="mt-2 space-y-1 text-sm">
                 {lastOrder.items.map((cartItem) => (
                     <li key={cartItem.menuItem.id} className="flex justify-between">
-                        <span>{cartItem.quantity} × {cartItem.menuItem.name}</span>
+                        <span>{cartItem.quantity} {content.symbols.times} {cartItem.menuItem.name}</span>
                         <span>{cartItem.getFormattedSubtotal()}</span>
                     </li>
                 ))}
