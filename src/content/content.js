@@ -44,6 +44,10 @@ const content = {
         spicyBadge: 'Spicy',
         addToCart: 'Add to cart',
         noItems: 'No dishes found.',
+        allOption: 'All',
+        notFound: 'Restaurant not found.',
+        viewCart: 'View cart',
+        itemsInCart: 'items in cart',
     },
 
     cart: {
