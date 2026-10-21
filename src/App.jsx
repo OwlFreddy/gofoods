@@ -16,11 +16,11 @@ export default function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/restaurants" element={<Restaurants />} />
                 <Route path="/restaurants/:id" element={<RestaurantMenu />} />
+                <Route path="/confirmation" element={<Confirmation />} />
 
                 <Route element={<PageContainer />}>
                     <Route path="/cart" element={<Cart />} />
                     <Route path="/checkout" element={<Checkout />} />
-                    <Route path="/confirmation" element={<Confirmation />} />
                     <Route path="*" element={<NotFound />} />
                 </Route>
             </Route>

@@ -37,6 +37,21 @@ const paths = {
             <path d="m6 6 12 12" />
         </>
     ),
+    trash: (
+        <>
+            <path d="M3 6h18" />
+            <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" />
+            <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" />
+        </>
+    ),
+    check: <path d="M20 6 9 17l-5-5" />,
+    alert: (
+        <>
+            <circle cx="12" cy="12" r="10" />
+            <line x1="12" y1="8" x2="12" y2="12" />
+            <line x1="12" y1="16" x2="12.01" y2="16" />
+        </>
+    ),
 }
 
 export default function Icon({ name, className = 'h-5 w-5', filled = false }) {
