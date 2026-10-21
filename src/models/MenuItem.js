@@ -1,5 +1,7 @@
+import { formatPrice } from '../utils/formatPrice'
+
 export default class MenuItem {
-    constructor({ id, restaurantId, categoryId, name, description, price, image, isVegetarian = false, isSpicy = false }) {
+    constructor({ id, restaurantId, categoryId, name, description, price, image = '', isVegetarian = false, isSpicy = false }) {
         this.id = id
         this.restaurantId = restaurantId
         this.categoryId = categoryId
@@ -12,6 +14,6 @@ export default class MenuItem {
     }
 
     getFormattedPrice() {
-        return '₱' + this.price.toLocaleString('en-PH')
+        return formatPrice(this.price)
     }
 }
