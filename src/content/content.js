@@ -72,6 +72,8 @@ const content = {
         ],
         noResults: 'No restaurants match your filters.',
         deliveryUnit: 'min',
+        searchChip: 'Search',
+        resultsCountOne: 'restaurant matches your filters',
     },
 
     menu: {
