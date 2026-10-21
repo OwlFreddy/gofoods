@@ -12,7 +12,6 @@ export default class Restaurant {
         this.deliveryFee = deliveryFee
         this.image = image
         this.description = description
-        this.deliveryTime = deliveryMin
     }
 
     getMenu(menuItems) {

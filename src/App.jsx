@@ -15,9 +15,9 @@ export default function App() {
             <Route element={<Layout />}>
                 <Route path="/" element={<Home />} />
                 <Route path="/restaurants" element={<Restaurants />} />
+                <Route path="/restaurants/:id" element={<RestaurantMenu />} />
 
                 <Route element={<PageContainer />}>
-                    <Route path="/restaurants/:id" element={<RestaurantMenu />} />
                     <Route path="/cart" element={<Cart />} />
                     <Route path="/checkout" element={<Checkout />} />
                     <Route path="/confirmation" element={<Confirmation />} />
